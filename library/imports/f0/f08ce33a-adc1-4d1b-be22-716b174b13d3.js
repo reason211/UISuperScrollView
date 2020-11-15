@@ -38,7 +38,7 @@ var testPanel = /** @class */ (function (_super) {
         _this.isRandomHeight = false;
         _this.isRandomWidth = false;
         // 模拟数据总数
-        _this.total = 50;
+        _this.total = 0;
         _this.datas = [];
         return _this;
     }
@@ -177,6 +177,9 @@ var testPanel = /** @class */ (function (_super) {
             node['playing'] = false;
             node.setScale(scale);
         }
+    };
+    testPanel.prototype.overScene = function (event, scene) {
+        cc.director.loadScene(scene);
     };
     __decorate([
         property(UISuperLayout_1.default)
